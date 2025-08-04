@@ -11,11 +11,11 @@ with zipfile.ZipFile(zip_path, 'r') as zip_ref:
     zip_ref.extractall(extract_path)
 
 for root, dirs, files in os.walk(extract_path):
-    print("📁", root)
+    print("Folder", root)
     for d in dirs:
-        print("  📁", d)
+        print("  Folder", d)
     for f in files:
-        print("  📄", f)
+        print("  Text", f)
 
 possible_paths = [
     os.path.join(extract_path, "train/images"),
